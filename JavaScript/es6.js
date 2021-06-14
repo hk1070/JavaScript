@@ -30,7 +30,8 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Object_
 }
 
 /* 
-Destructuring Assignment
+Destructuring Assignment (구조분해 할당)
+배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment 
 */
 
@@ -79,7 +80,7 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destruc
 }
 
 /*
- Spread Syntax
+ Spread Syntax (전개구문)
  https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
  {
@@ -120,6 +121,82 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destruc
     const cat2 = { cat: '😻'};
     const cat = { ...cat1, ...cat2 };
     console.log(cat);
+    console.clear();
 
 
+ }
+
+ /* 
+ Default parameters (기본값 매개변수)
+ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters 
+ */
+
+ {
+// ❌
+{
+    function printMessage(message) {
+        if(message == null){
+            message = 'default message';
+        }
+      console.log(message);
+    }
+
+    printMessage('hello');
+    printMessage();
+  }
+
+ // 💡
+ // 인자 다음에 기본적으로 원하는 초기값을 지정
+{
+    function printMessage(message = 'default message') {
+      console.log(message);
+    }
+
+    printMessage('hello');
+    printMessage();
+}
+ }
+
+ /* 
+ Ternary Operator(삼항 조건 연산자)
+ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+ */
+
+ {
+    const isCat = true;
+    // ❌
+    {
+      let component;
+      if (isCat) {
+        component = '😸';
+      } else {
+        component = '🐶';
+      }
+      console.log(component);
+    }
+
+     // 💡
+  {
+      const component = isCat ? '😸' : '🐶';
+      console.log(component);
+      console.log(isCat ? '😸' : '🐶');
+
+  }
+
+ }
+
+ /* 
+ Template Literals
+ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals 
+ */
+
+ {
+    const weather = '🌥️';
+    const temparature = '16°C';
+
+    // ❌
+    console.log( 'Today weather is ' + weather + ' and temparature is ' + temparature + '.');
+
+    // 💡
+    console.log(`Today weather is ${weather} and temparature is ${temparature}.`)
  }
