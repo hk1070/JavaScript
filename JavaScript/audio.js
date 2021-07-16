@@ -1,5 +1,7 @@
 'use strict';
 
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+
 const alertSound = new Audio('./sound/alert.mp3');
 const bgSound = new Audio('./sound/bg.mp3');
 
