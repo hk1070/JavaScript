@@ -5,12 +5,12 @@ export default class Builder {
     this.gameDuration = duration;
     return this;
   }
-  withdogCount(num) {
+  withDogCount(num) {
     this.dogCount = num;
     return this;
   }
 
-  withcatCount(num) {
+  withCatCount(num) {
     this.catCount = num;
     return this;
   }
