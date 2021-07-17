@@ -1,6 +1,6 @@
 // Builder Pattern
 
-export default class Builder {
+export default class GameBuilder {
   withGameDuration(duration) {
     this.gameDuration = duration;
     return this;
