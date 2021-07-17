@@ -1,15 +1,16 @@
 // Builder Pattern
+
 export default class Builder {
   withGameDuration(duration) {
     this.gameDuration = duration;
     return this;
   }
-  withCarrotCount(num) {
+  withdogCount(num) {
     this.dogCount = num;
     return this;
   }
 
-  withBugCount(num) {
+  withcatCount(num) {
     this.catCount = num;
     return this;
   }
