@@ -29,4 +29,5 @@ promise1
 promise2
 setTimeout
 
-// promise가 마이크로 태크스 큐에 등록되기 때문에 태스큐 큐에 등록된 setTimeout 보다 먼저 실행됨
+// 이벤트 루프는 마이크로태스크 큐의 모든 태스크들을 처리한 다음, 태스크 큐의 태스크들을 처리
+// promise가 마이크로 태크스 큐에 등록되기 때문에 setTimeout 보다 먼저 실행됨
