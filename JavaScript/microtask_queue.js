@@ -6,16 +6,27 @@
 // 마이크로태스크 큐는 먼저 들어온 작업을 먼저 실행(FIFO, first-in-first-out).
 // 실행할 것이 아무것도 남아있지 않을 때만 마이크로태스크 큐에 있는 작업이 실행되기 시작
 
-function handleClick() {
-  console.log('handleClick');
-  Promise.resolve(0) //
-    .then(() => {
-      console.log('then');
-      handleClick();
-    });
-}
+console.log('script start');
 
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-  handleClick();
-});
+setTimeout(function () {
+  console.log('setTimeout');
+}, 0);
+
+Promise.resolve()
+  .then(function () {
+    console.log('promise1');
+  })
+  .then(function () {
+    console.log('promise2');
+  });
+
+console.log('script end');
+
+// 출력결과
+script start
+script end
+promise1
+promise2
+setTimeout
+
+// promise가 마이크로 태크스 큐에 등록되기 때문에 태스큐 큐에 등록된 setTimeout 보다 먼저 실행됨
