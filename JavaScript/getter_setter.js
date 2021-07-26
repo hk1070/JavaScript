@@ -1,5 +1,6 @@
 'use strict';
 
+// https://www.youtube.com/watch?v=_DLhUBWsRtw&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=6
 // https://ko.javascript.info/property-accessors
 // 접근자 프로퍼티(accessor property)
 // 접근자 프로퍼티의 본질은 함수인데, 이 함수는 값을 획득(get)하고 설정(set)하는 역할을 담당하며 외부 코드에서는 함수가 아닌 일반적인 프로퍼티처럼 보입니다.
