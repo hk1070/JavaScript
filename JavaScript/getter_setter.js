@@ -20,12 +20,12 @@ let user = {
     [this.name, this.surname] = value.split(' ');
   },
 };
-
+// split() ->  String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다.
 // 주어진 값을 사용해 set fullName이 실행됩니다.
 user.fullName = 'Alice Cooper';
 
-alert(user.name); // Alice
-alert(user.surname); // Cooper
+console.log(user.name); // Alice
+console.log(user.surname); // Cooper
 
 // 예제 2 ///////////////////////
 class User {
@@ -46,3 +46,8 @@ class User {
 
 const user1 = new User('Steve', 'Job', -1);
 console.log(user1.age); // -> 0
+
+const user2 = new User('John', 'Smith', 3);
+console.log(user2.firstName);
+console.log(user2.lastName);
+console.log(user2.age);
